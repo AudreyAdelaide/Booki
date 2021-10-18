@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+
+:root {
+  --blue-color: #0065fc;
+  --clear-blue: #deebff;
+  --grey: #f2f2f2;
+  --white: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.7;
+  transition: all 0.3s ease;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+a:hover {
+  color: var(--blue-color);
+}
+
+li {
+  list-style-type: none;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  background: var(--white);
+  margin: 0 5%;
+}
+
+/******************* HEADER*************** */
+
+header {
+  margin-top: 0;
+  padding: 0 20px;
+  height: 162px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+#logo img {
+  width: 122px;
+}
+nav {
+  display: flex;
+  align-items: flex-end;
+}
+
+nav ul li {
+  padding: 50px 0 82px;
+  display: inline-block;
+  margin: 0 20px;
+}
+nav li:hover {
+  color: var(--blue-color);
+  border-top: solid 3px var(--blue-color);
+  transition: all 0.3s ease;
+}
+
+nav li {
+  border-top: solid 3px transparent;
+  transition: 0.1s ease;
+}
+
+/*********** responsive **************/
+
+/* DESKTOP */
+/* @media screen and (max-width: 992px) {
+} */
+
+/* TABLET */
+@media screen and (max-width: 768px) {
+  body {
+    margin: 0;
+  }
+  header {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+  #logo img {
+    width: 170px;
+  }
+  nav {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    font-size: 20px;
+  }
+  nav ul {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+  }
+  nav ul li {
+    width: 50%;
+  }
+  nav ul li {
+    display: inline-block;
+    padding: 10px 40px;
+    margin: 0;
+
+    text-align: center;
+  }
+  nav li:hover {
+    color: var(--blue-color);
+    border-top: none;
+    border-bottom: solid 6px var(--blue-color);
+    transition: all 0.3s ease;
+  }
+
+  nav li {
+    border-bottom: solid 6px var(--grey);
+    border-top: none;
+  }
+}
+
+/* MOBILE */
+/* @media screen and (max-width: 768px) {
+} */
+
+/********** Research section **************/
+
+.research-form label,
+.research-form input,
+.research-form button {
+  height: 45px;
+}
+
+.research-form {
+  margin: 22px 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.research-form label {
+  background: var(--grey);
+  border-radius: 15px 0 0 15px;
+  width: 50px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.research-form button {
+  background: var(--blue-color);
+  width: 120px;
+  color: #fff;
+
+  border: none;
+  border-radius: 0 15px 15px 0;
+}
+
+.research-form ::placeholder {
+  /* padding: 0 10px; */
+  font-weight: 900;
+  color: #000;
+}
+
+.research-form input {
+  border: solid 1px var(--grey);
+  outline: none;
+  padding: 15px;
+}
+
+/* .research-form button:hover {
+  color: #000;
+  background: var(--clear-blue);
+  transition: all 0.3s ease;
+} */
+
+/**** Filtres ****/
+
+.filtres h3 {
+  margin-right: 20px;
+}
+
+.filtres,
+.filtres ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.filtres {
+  margin: 20px 0;
+
+  display: flex;
+  align-items: center;
+}
+
+.filtres li {
+  margin: 0 15px;
+
+  height: 45px;
+  padding-right: 15px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: solid 2px var(--grey);
+  border-radius: 60px;
+}
+
+.filtres li .fas {
+  width: 45px;
+  height: 45px;
+  margin-right: 10px;
+  border-radius: 50%;
+  color: var(--blue-color);
+  background: var(--clear-blue);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
