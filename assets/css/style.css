@@ -21,7 +21,6 @@ body {
   font-family: "Raleway", sans-serif;
   background: var(--white);
   transition: all 0.3s ease;
-  overflow: hidden;
 }
 
 a {
@@ -36,13 +35,17 @@ h3 {
   padding: 0;
 }
 
-a:hover {
+a:hover,
+li:hover {
   color: var(--blue-color);
-  font-weight: 500;
 }
 
 li {
   list-style-type: none;
+}
+
+ul {
+  list-style: none;
 }
 
 header {
@@ -84,15 +87,20 @@ nav ul li {
 
   text-align: center;
 }
-nav li:hover {
-  color: var(--blue-color);
+nav ul li:hover {
   border-top: solid 3px var(--blue-color);
-  transition: all 0.3s ease;
+  transition: 0.2s ease;
 }
 
-nav li {
+nav ul li:hover a {
+  color: var(--blue-color);
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+nav ul li {
   border-top: solid 3px transparent;
-  transition: 0.1s ease;
+  transition: 0.2s ease;
 }
 
 /********** Section Rechercher **************/
@@ -117,7 +125,7 @@ form .btn-submit {
   background: var(--blue-color);
   width: 120px;
   color: #fff;
-  font-weight: 900;
+  font-weight: 600;
   font-size: 16px;
   border: none;
   border-radius: 0 15px 15px 0;
@@ -128,7 +136,7 @@ form .btn-submit {
 }
 
 ::placeholder {
-  font-weight: 900;
+  font-weight: 600;
   color: #000;
 }
 
@@ -159,7 +167,7 @@ form input {
 }
 
 .filtres li {
-  font-weight: 900;
+  font-weight: 600;
 
   margin: 0 9px;
   height: 45px;
@@ -171,6 +179,13 @@ form input {
 
   border: solid 2px var(--dark-grey);
   border-radius: 60px;
+
+  transition: transform 0.3s ease;
+}
+
+.filtres li:hover {
+  transform: scale(1.1);
+  transition: 0.2s ease;
 }
 
 .filtres .fas {
@@ -271,8 +286,7 @@ form input {
 
     text-align: center;
   }
-  nav li:hover {
-    color: var(--blue-color);
+  nav ul li:hover {
     border-top: none;
     border-bottom: solid 6px var(--blue-color);
     transition: all 0.3s ease;
