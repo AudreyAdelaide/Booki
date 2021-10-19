@@ -298,7 +298,7 @@ form input {
 }
 
 /* MOBILE */
-@media screen and (max-width: 356px) {
+@media screen and (max-width: 400px) {
   .logo {
     width: 120px;
     margin: 15px 0 15px 30px;
