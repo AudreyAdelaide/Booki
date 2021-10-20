@@ -131,6 +131,11 @@ form .btn-submit {
   border-radius: 0 15px 15px 0;
 }
 
+.btn-submit:hover {
+  transform: scale(1.1);
+  transition: 0.2s ease;
+}
+
 #mobile {
   display: none;
 }
@@ -205,10 +210,16 @@ form input {
   align-items: center;
 }
 
-#recherche p .fas {
+#info {
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+}
+
+#info .fas {
   font-size: 11px;
-  width: 23px;
-  height: 23px;
+  width: 25px;
+  height: 25px;
   margin-right: 10px;
 
   border-radius: 50%;
@@ -221,10 +232,144 @@ form input {
   align-items: center;
 }
 
-#info {
+/********  Section hébergement ********/
+
+#liste-hebergement {
+  margin-top: 40px;
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
+}
+
+/**** Bloc gauche ****/
+
+.bloc-gauche {
+  width: 70%;
+
+  background: var(--grey);
+  padding: 1%;
+
+  border-radius: 20px;
+}
+
+.bloc-droit {
+  width: 30%;
+  margin-left: 15px;
+
+  background: var(--grey);
+  padding: 1%;
+
+  border-radius: 20px;
+}
+
+.heberment-list-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bloc-gauche h2 {
+  margin-bottom: 15px;
+}
+
+.prix {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.blue-stars {
+  color: var(--blue-color);
+}
+
+.grey-stars {
+  color: var(--dark-grey);
+}
+
+.blue-stars,
+.grey-stars {
+  font-size: 12px;
+}
+
+/* Cards Marseille */
+
+.hebergement {
+  background: var(--white);
+  padding: 1%;
+  border-radius: 20px;
+  margin: 2%;
+  margin-bottom: auto;
+  width: 30%;
+  /* width: 325px; */
+
+  box-shadow: 1px 1px 15px var(--dark-grey);
+
+  transition: transform 0.3s ease;
+}
+
+.hebergement img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+
+.hebergement-text {
+  margin: 0 12px 5px;
+  line-height: 1.3;
+}
+
+.hebergement-title {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.hebergement:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+/* bloc droit */
+
+.bloc-droit h1 {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+}
+
+/* Cards popular */
+
+.hebergement-populaire {
+  display: flex;
+  background: var(--white);
+  padding: 1%;
+  border-radius: 20px;
+
+  box-shadow: 1px 1px 15px var(--dark-grey);
+
+  transition: transform 0.3s ease;
+}
+
+.hebergement-populaire img {
+  width: 40%;
+
+  /* margin-right: 20px; */
+  object-fit: cover;
+  border-radius: 20px 0 0 20px;
+}
+
+.populaire-infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.populaire-title {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.hebergement-populaire:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
 }
 
 /*********** responsive **************/
@@ -248,6 +393,51 @@ form input {
 
   #categories ul li {
     margin: 10px;
+  }
+
+  .heberment-list-container {
+    flex-wrap: wrap;
+  }
+
+  .hebergement {
+    background: var(--white);
+    padding: 5px;
+    border-radius: 20px;
+    width: 45%;
+    box-shadow: 1px 1px 15px var(--dark-grey);
+
+    transition: transform 0.3s ease;
+  }
+
+  #liste-hebergement {
+    flex-direction: column-reverse;
+  }
+
+  /* .hebergement-title {
+    font-weight: 700;
+    font-size: 100%;
+  } */
+
+  .hebergement-populaire {
+    display: flex;
+    background: var(--white);
+    padding: 1%;
+    border-radius: 20px;
+
+    box-shadow: 1px 1px 15px var(--dark-grey);
+
+    transition: transform 0.3s ease;
+  }
+
+  .bloc-gauche,
+  .bloc-droit {
+    width: 100%;
+  }
+
+  .bloc-droit {
+    margin-left: 0;
+    padding: 2%;
+    margin-bottom: 2%;
   }
 }
 
@@ -314,7 +504,6 @@ form input {
   .filtres {
     flex-direction: column;
     align-items: flex-start;
-    justify-content: ;
   }
 
   #categories ul li {
@@ -324,10 +513,24 @@ form input {
   #info {
     align-items: flex-start;
   }
+
+  #liste-hebergement {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .bloc-droit,
+  .bloc-gauche {
+    border-radius: 0;
+    padding: 5%;
+  }
+
+  .hebergement {
+    margin: 2.5%;
+  }
 }
 
 /* MOBILE */
-@media screen and (max-width: 458px) {
+@media screen and (max-width: 490px) {
   /* .logo {
     width: 120px;
     margin: 15px 0 15px 30px;
@@ -385,5 +588,21 @@ form input {
 
   nav ul li {
     padding: 10px;
+  }
+
+  /* #info .fas {
+    font-size: 11px;
+    width: 12%;
+    height: 22px;
+    margin-right: 10px;
+
+  } */
+
+  /* .heberment-list-container {
+    flex-direction: column;
+  } */
+
+  .hebergement {
+    width: 100%;
   }
 }
