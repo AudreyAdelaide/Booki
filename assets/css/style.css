@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
 
+/*************************
+CONFIGURATION DES COULEURS
+**************************/
 :root {
   --blue-color: #0065fc;
   --clear-blue: #deebff;
@@ -35,6 +38,15 @@ h3 {
   padding: 0;
 }
 
+h3 {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+p {
+  font-size: 16px;
+}
+
 a:hover,
 li:hover {
   color: var(--blue-color);
@@ -57,7 +69,9 @@ section {
   margin: 0 40px;
 }
 
-/***** FONTS ********/
+/*************************
+********** FONTS *********
+**************************/
 h1 {
   font-size: 22px;
 }
@@ -65,14 +79,18 @@ nav {
   font-size: 16px;
 }
 
-/********** MAIN **************/
+/*************************
+********** MAIN *********
+**************************/
 header,
 main {
   max-width: 1440px;
   margin: 0 auto;
 }
 
-/******************* HEADER*************** */
+/**************************
+********** header *********
+***************************/
 
 header {
   display: flex;
@@ -82,7 +100,7 @@ header {
 
 .logo {
   width: 55%;
-  margin-left: 20px;
+  margin-left: 15px;
 }
 
 #img-2 {
@@ -115,6 +133,9 @@ nav ul li {
 
 /********** Section Rechercher **************/
 
+/**************************
+***** SECTION RECHERCHE ***
+***************************/
 form {
   margin: 22px 0 34px;
   display: flex;
@@ -161,8 +182,9 @@ form input {
   padding: 15px;
 }
 
-/**** Filtres ****/
-
+/**************************
+********** FILTRES ********
+***************************/
 .filtres h2 {
   margin-right: 20px;
   font-size: 20px;
@@ -207,14 +229,11 @@ form input {
   width: 45px;
   height: 45px;
   padding: 20px;
-
   margin-left: -2px;
-
   margin-right: 10px;
   border-radius: 50%;
   color: var(--blue-color);
   background: var(--clear-blue);
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -223,7 +242,6 @@ form input {
 #info {
   display: flex;
   flex-direction: row;
-  /* align-items: center; */
 }
 
 #info .fas {
@@ -231,12 +249,10 @@ form input {
   width: 25px;
   height: 25px;
   margin-right: 10px;
-
   border-radius: 100%;
   background: #fff;
   border: solid 1px var(--dark-grey);
   color: var(--blue-color);
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -244,30 +260,32 @@ form input {
 
 /********  Section hébergement ********/
 
+/**************************
+*** SECTION HEBERGEMENT ***
+***************************/
+
 #liste-hebergement {
   margin-top: 40px;
   display: flex;
   justify-content: space-between;
 }
 
-/**** Bloc gauche ****/
+/**************************
+******* HEBERGEMENT *******
+***************************/
 
 .bloc-gauche {
-  width: 70%;
-
+  flex: 3;
   background: var(--grey);
-  padding: 45px 40px;
-
+  padding: 45px 3%;
   border-radius: 20px;
 }
 
 .bloc-droit {
-  width: 30%;
+  flex: 1;
   margin-left: 15px;
-  padding: 45px 40px;
+  padding: 45px 3%;
   background: var(--grey);
-  /* padding: 1%; */
-
   border-radius: 20px;
 }
 
@@ -277,7 +295,7 @@ form input {
 
 .heberment-list-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
 
   gap: 30px;
@@ -301,7 +319,9 @@ form input {
   font-size: 12px;
 }
 
-/* Cards Marseille */
+/**************************
+**** CARDS HEBERGEMENT ****
+***************************/
 
 .hebergement {
   background: var(--white);
@@ -330,18 +350,15 @@ form input {
   line-height: 1.3;
 }
 
-.hebergement-title {
-  font-weight: 700;
-  font-size: 18px;
-}
-
 .hebergement:hover {
   color: var(--blue-color);
   transform: scale(1.03);
   transition: transform 0.3s ease;
 }
 
-/* bloc droit */
+/**************************
+******** POPULAIRE ********
+***************************/
 
 .bloc-droit h1 {
   display: flex;
@@ -351,7 +368,9 @@ form input {
   margin-bottom: 22px;
 }
 
-/* Cards popular */
+/**************************
+**** CARDS POPULAIRES *****
+***************************/
 
 #cards-populaires {
   display: flex;
@@ -390,11 +409,6 @@ form input {
   margin: 10px;
 }
 
-.populaire-title {
-  font-weight: 700;
-  font-size: 18px;
-}
-
 .hebergement-populaire:hover {
   color: var(--blue-color);
   transform: scale(1.03);
@@ -407,9 +421,11 @@ form input {
   margin-top: 45px;
 }
 
-/*********** responsive **************/
+/***************************
+******** RESPONSIVE ********
+****************************/
 
-/* DESKTOP */
+/******** DESKTOP ********/
 @media screen and (max-width: 1350px) {
   .hebergement {
     width: 45%;
@@ -424,6 +440,20 @@ form input {
     width: 180px;
     margin: 0;
     text-align: center;
+  }
+
+  section {
+    margin: 0;
+  }
+
+  #recherche {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+
+  .bloc-gauche,
+  .bloc-droit {
+    border-radius: 0;
   }
 
   #categories ul {
@@ -458,16 +488,22 @@ form input {
     font-size: 100%;
   } */
 
-  #cards-populaires {
-    flex-wrap: nowrap;
-  }
+  /* #cards-populaires {
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  } */
+
+  /* #cards-populaires {
+    justify-content: flex-start;
+  } */
 
   .hebergement-populaire {
     display: flex;
     background: var(--white);
     padding: 1%;
     border-radius: 20px;
-
+    /* width: 45%; */
     box-shadow: 1px 1px 15px var(--dark-grey);
 
     transition: transform 0.3s ease;
@@ -485,7 +521,7 @@ form input {
   }
 }
 
-/* TABLET */
+/******** TABLETTE ********/
 @media screen and (max-width: 768px) {
   header {
     flex-direction: column;
@@ -565,15 +601,14 @@ form input {
   .bloc-droit,
   .bloc-gauche {
     border-radius: 0;
-    padding: 5%;
   }
 
-  .hebergement {
-    margin: 2.5%;
+  #cards-populaires {
+    flex-wrap: wrap;
   }
 }
 
-/* MOBILE */
+/********* MOBILE *********/
 @media screen and (max-width: 490px) {
   /* .logo {
     width: 120px;
@@ -652,6 +687,10 @@ form input {
   }
 
   .hebergement {
+    width: 100%;
+  }
+
+  #cards-populaires {
     width: 100%;
   }
 }
