@@ -65,6 +65,13 @@ nav {
   font-size: 16px;
 }
 
+/********** MAIN **************/
+header,
+main {
+  width: 1440px;
+  margin: 0 auto;
+}
+
 /******************* HEADER*************** */
 
 header {
@@ -74,18 +81,21 @@ header {
 }
 
 .logo {
-  width: 100px;
+  width: 55%;
   margin-left: 20px;
 }
+
 #img-2 {
   display: none;
 }
 
-nav ul li {
-  padding: 50px 35px;
-  display: inline-block;
+nav ul {
+  display: flex;
+  align-items: center;
+}
 
-  text-align: center;
+nav ul li {
+  padding: 40px 30px;
 }
 nav ul li:hover {
   border-top: solid 3px var(--blue-color);
@@ -222,7 +232,7 @@ form input {
   height: 25px;
   margin-right: 10px;
 
-  border-radius: 50%;
+  border-radius: 100%;
   background: #fff;
   border: solid 1px var(--dark-grey);
   color: var(--blue-color);
@@ -264,10 +274,7 @@ form input {
 .heberment-list-container {
   display: flex;
   justify-content: space-between;
-}
-
-.bloc-gauche h2 {
-  margin-bottom: 15px;
+  flex-wrap: wrap;
 }
 
 .prix {
@@ -293,10 +300,10 @@ form input {
 .hebergement {
   background: var(--white);
   padding: 1%;
-  border-radius: 20px;
+  border-radius: 15px;
   margin: 2%;
   margin-bottom: auto;
-  width: 30%;
+  width: 29%;
   /* width: 325px; */
 
   box-shadow: 1px 1px 15px var(--dark-grey);
@@ -308,7 +315,7 @@ form input {
   width: 100%;
   height: 100px;
   object-fit: cover;
-  border-radius: 20px 20px 0 0;
+  border-radius: 15px 15px 0 0;
 }
 
 .hebergement-text {
@@ -322,7 +329,8 @@ form input {
 }
 
 .hebergement:hover {
-  transform: scale(1.1);
+  color: var(--blue-color);
+  transform: scale(1.03);
   transition: transform 0.3s ease;
 }
 
@@ -332,15 +340,29 @@ form input {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  margin-bottom: 5%;
 }
 
 /* Cards popular */
 
+#cards-populaires {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  gap: 32px;
+}
+
 .hebergement-populaire {
   display: flex;
+
   background: var(--white);
   padding: 1%;
-  border-radius: 20px;
+  width: 100%;
+  height: 145px;
+  /* margin: 0 0 3%; */
+  border-radius: 15px;
 
   box-shadow: 1px 1px 15px var(--dark-grey);
 
@@ -349,10 +371,9 @@ form input {
 
 .hebergement-populaire img {
   width: 40%;
-
   /* margin-right: 20px; */
   object-fit: cover;
-  border-radius: 20px 0 0 20px;
+  border-radius: 15px 0 0 15px;
 }
 
 .populaire-infos {
@@ -368,8 +389,15 @@ form input {
 }
 
 .hebergement-populaire:hover {
-  transform: scale(1.1);
+  color: var(--blue-color);
+  transform: scale(1.03);
   transition: transform 0.3s ease;
+}
+
+.plus {
+  font-weight: 700;
+  font-size: 18px;
+  margin: 3%;
 }
 
 /*********** responsive **************/
@@ -417,6 +445,10 @@ form input {
     font-weight: 700;
     font-size: 100%;
   } */
+
+  #cards-populaires {
+    flex-wrap: nowrap;
+  }
 
   .hebergement-populaire {
     display: flex;
@@ -477,7 +509,7 @@ form input {
     text-align: center;
   }
   nav ul li:hover {
-    border-top: none;
+    border-top: transparent;
     border-bottom: solid 6px var(--blue-color);
     transition: all 0.3s ease;
   }
@@ -601,6 +633,10 @@ form input {
   /* .heberment-list-container {
     flex-direction: column;
   } */
+  #cards-populaires {
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
 
   .hebergement {
     width: 100%;
