@@ -15,15 +15,14 @@ CONFIGURATION DES COULEURS
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  transition: all 0.3s ease;
 }
 
 body {
   margin: 0;
   padding: 0;
-  line-height: 1.7;
   font-family: "Raleway", sans-serif;
   background: var(--white);
-  transition: all 0.3s ease;
 }
 
 a {
@@ -37,17 +36,50 @@ h3 {
   margin: 0;
   padding: 0;
 }
+
+/*************************
+********** FONTS *********
+**************************/
+
 h1,
 h2 {
-  font-size: 20px;
+  font-size: 22px;
+  font-weight: 700;
 }
 
 h3 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+p,
+nav li {
+  font-size: 16px;
+}
+
+::placeholder {
+  font-size: 18px;
+  font-weight: 700;
+  color: #000;
+}
+
+#desktop {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.filtres h2,
+.plus p {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.filtres li {
   font-size: 18px;
 }
 
-p {
-  font-size: 16px;
+.hebergement p {
+  font-size: 14px;
 }
 
 a:hover,
@@ -64,22 +96,12 @@ ul {
 }
 
 header {
-  padding: 0 40px;
+  padding: 0 50px;
 }
 
 section {
   margin: 0 auto;
-  margin: 0 40px;
-}
-
-/*************************
-********** FONTS *********
-**************************/
-h1 {
-  font-size: 22px;
-}
-nav {
-  font-size: 16px;
+  margin: 0 50px;
 }
 
 /*************************
@@ -139,6 +161,12 @@ nav ul li {
 /**************************
 ***** SECTION RECHERCHE ***
 ***************************/
+
+#recherche h1,
+#subtitle {
+  padding-left: 4px;
+}
+
 form {
   margin: 22px 0 34px;
   display: flex;
@@ -157,10 +185,8 @@ form label {
 
 form .btn-submit {
   background: var(--blue-color);
-  width: 120px;
+  padding: 0 18px;
   color: #fff;
-  font-weight: 600;
-  font-size: 16px;
   border: none;
   border-radius: 0 15px 15px 0;
 }
@@ -172,11 +198,6 @@ form .btn-submit {
 
 #mobile {
   display: none;
-}
-
-::placeholder {
-  font-weight: 600;
-  color: #000;
 }
 
 form input {
@@ -193,8 +214,7 @@ form input {
 }
 
 .filtres h2 {
-  margin-right: 20px;
-  font-size: 20px;
+  margin-left: 12px;
 }
 
 .filtres,
@@ -285,14 +305,16 @@ form input {
 ***************************/
 
 .bloc-gauche {
-  flex: 3;
+  /* flex: 3; */
+  width: 880px;
   background: var(--grey);
   padding: 45px 3%;
   border-radius: 20px;
 }
 
 .bloc-droit {
-  flex: 1;
+  /* flex: 1; */
+  width: 420px;
   margin-left: 15px;
   padding: 45px 3%;
   background: var(--grey);
@@ -335,14 +357,9 @@ form input {
 
 .hebergement {
   background: var(--white);
-  padding: 1%;
   border-radius: 15px;
-  /* margin: 2%; */
   margin-bottom: auto;
-
   width: 245px;
-  height: 200px;
-
   box-shadow: 1px 1px 15px var(--dark-grey);
 
   transition: transform 0.3s ease;
@@ -350,13 +367,14 @@ form input {
 
 .hebergement img {
   width: 100%;
-  height: 100px;
+  height: 114px;
   object-fit: cover;
   border-radius: 15px 15px 0 0;
+  padding: 5px 5px 0 5px;
 }
 
 .hebergement-text {
-  margin: 0 12px 5px;
+  margin: 12px 15px 10px;
   line-height: 1.3;
 }
 
@@ -393,21 +411,16 @@ form input {
 .hebergement-populaire {
   display: flex;
   background: var(--white);
-  padding: 1%;
-
   width: 343px;
   height: 145px;
-  /* margin: 0 0 3%; */
   border-radius: 15px;
-
   box-shadow: 1px 1px 15px var(--dark-grey);
-
   transition: transform 0.3s ease;
 }
 
 .hebergement-populaire img {
-  width: 40%;
-  /* margin-right: 20px; */
+  width: 127px;
+  padding: 5px 0 5px 5px;
   object-fit: cover;
   border-radius: 15px 0 0 15px;
 }
@@ -416,7 +429,8 @@ form input {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 10px;
+  margin: 10px 20px;
+  line-height: 1.3;
 }
 
 .hebergement-populaire:hover {
@@ -427,7 +441,6 @@ form input {
 
 .plus {
   font-weight: 700;
-  font-size: 18px;
   margin-top: 45px;
 }
 
@@ -447,25 +460,6 @@ form input {
   h3 {
     margin: 0;
     padding: 0;
-  }
-  /* h1,
-  h2,
-  h3,
-  p,
-  li {
-    font-size: 100%;
-  } */
-
-  /* h3 {
-    font-size: 18px;
-  }
-
-  p {
-    font-size: 16px;
-  } */
-
-  nav {
-    font-size: 18px;
   }
 
   nav ul li {
@@ -508,8 +502,8 @@ form input {
   .hebergement {
     background: var(--white);
     padding: 5px;
-    border-radius: 20px;
-    width: 45%;
+    border-radius: 15px;
+    width: 43%;
     box-shadow: 1px 1px 15px var(--dark-grey);
 
     transition: transform 0.3s ease;
@@ -518,28 +512,11 @@ form input {
   #liste-hebergement {
     flex-direction: column-reverse;
   }
-
-  /* .hebergement-title {
-    font-weight: 700;
-    font-size: 100%;
-  } */
-
-  /* #cards-populaires {
-    flex-direction: column;
-    align-items: flex-start;
-    flex-wrap: wrap;
-  } */
-
-  /* #cards-populaires {
-    justify-content: flex-start;
-  } */
-
   .hebergement-populaire {
     display: flex;
     background: var(--white);
-    padding: 1%;
-    border-radius: 20px;
-    /* width: 45%; */
+    padding: 5px;
+    border-radius: 15px;
     box-shadow: 1px 1px 15px var(--dark-grey);
 
     transition: transform 0.3s ease;
@@ -559,13 +536,46 @@ form input {
 
 /******** TABLETTE ********/
 @media screen and (max-width: 768px) {
+  /*************************
+********** FONTS *********
+**************************/
+
   h1,
-  h2,
-  h3,
-  p,
-  li {
-    font-size: 100%;
+  h2 {
+    font-size: 25px;
+    font-weight: 700;
   }
+
+  h3 {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  p,
+  nav li {
+    font-size: 18px;
+  }
+
+  .filtres h2,
+  .plus p {
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  .filtres li {
+    font-size: 19px;
+    font-weight: 700;
+  }
+
+  .hebergement p {
+    font-size: 16px;
+  }
+
+  ::placeholder {
+    font-size: 22px;
+  }
+
+  /********************/
 
   header {
     flex-direction: column;
@@ -581,8 +591,6 @@ form input {
     width: 100%;
     margin: 0;
     padding: 0;
-
-    font-size: 20px;
   }
   nav ul {
     width: 100%;
@@ -654,19 +662,46 @@ form input {
 
 /********* MOBILE *********/
 @media screen and (max-width: 480px) {
-  /* .logo {
-    width: 120px;
-    margin: 15px 0 15px 30px;
-  } */
+  /*************************
+********** FONTS *********
+**************************/
 
   h1,
-  h2,
-  h3,
-  p,
-  li {
-    font-size: 100%;
+  h2 {
+    font-size: 28px;
+    font-weight: 700;
   }
 
+  h3 {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  p,
+  nav li {
+    font-size: 20px;
+  }
+
+  .filtres h2,
+  .plus p {
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  .filtres li {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .hebergement p {
+    font-size: 17px;
+  }
+
+  ::placeholder {
+    font-size: 22px;
+  }
+
+  /********************/
   #img-1 {
     display: block;
   }
@@ -703,8 +738,6 @@ form input {
     width: 50px;
     height: 50px;
     color: #fff;
-
-    font-size: 16px;
     border: none;
     border-radius: 15px;
   }
@@ -715,29 +748,10 @@ form input {
     display: none;
   }
 
-  /* .filtres li {
-  } */
-
-  nav {
-    font-size: 16px;
-  }
-
   nav ul li {
     padding: 10px;
   }
 
-  .filtres li {
-    font-size: 14px;
-  }
-
-  #info .fas {
-    font-size: 10px;
-    margin-right: 10px;
-  }
-
-  /* .heberment-list-container {
-    flex-direction: column;
-  } */
   #cards-populaires {
     flex-wrap: nowrap;
     flex-direction: column;
