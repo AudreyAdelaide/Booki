@@ -668,37 +668,37 @@ form input {
 
   h1,
   h2 {
-    font-size: 28px;
+    font-size: 26px;
     font-weight: 700;
   }
 
   h3 {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700;
   }
 
   p,
   nav li {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .filtres h2,
   .plus p {
-    font-size: 22px;
-    font-weight: 700;
-  }
-
-  .filtres li {
     font-size: 20px;
     font-weight: 700;
   }
 
+  .filtres li {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
   .hebergement p {
-    font-size: 17px;
+    font-size: 15px;
   }
 
   ::placeholder {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   /********************/
@@ -708,8 +708,8 @@ form input {
   #img-2 {
     display: none;
   }
-  section {
-    margin: 0 5%;
+  #recherche {
+    margin: 0 22px;
   }
 
   #recherche h1 {
@@ -768,4 +768,47 @@ form input {
   .hebergement-populaire {
     width: 100%;
   }
+}
+
+@media screen and (max-width: 390px) {
+  /*************************
+********** FONTS *********
+**************************/
+
+  h1,
+  h2 {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  h3 {
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  p,
+  nav li {
+    font-size: 16px;
+  }
+
+  .filtres h2,
+  .plus p {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .filtres li {
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .hebergement p {
+    font-size: 13px;
+  }
+
+  ::placeholder {
+    font-size: 18px;
+  }
+
+  /********************/
 }
