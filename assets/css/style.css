@@ -37,9 +37,12 @@ h3 {
   margin: 0;
   padding: 0;
 }
+h1,
+h2 {
+  font-size: 20px;
+}
 
 h3 {
-  font-weight: 700;
   font-size: 18px;
 }
 
@@ -439,6 +442,28 @@ form input {
   }
 } */
 @media screen and (max-width: 992px) {
+  h1,
+  h2,
+  h3 {
+    margin: 0;
+    padding: 0;
+  }
+  /* h1,
+  h2,
+  h3,
+  p,
+  li {
+    font-size: 100%;
+  } */
+
+  /* h3 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 16px;
+  } */
+
   nav {
     font-size: 18px;
   }
@@ -454,7 +479,7 @@ form input {
   }
 
   #recherche {
-    margin: 0 5%;
+    margin: 0 6%;
   }
 
   .bloc-gauche,
@@ -534,6 +559,14 @@ form input {
 
 /******** TABLETTE ********/
 @media screen and (max-width: 768px) {
+  h1,
+  h2,
+  h3,
+  p,
+  li {
+    font-size: 100%;
+  }
+
   header {
     flex-direction: column;
     margin: 20px 0;
@@ -620,11 +653,19 @@ form input {
 }
 
 /********* MOBILE *********/
-@media screen and (max-width: 490px) {
+@media screen and (max-width: 480px) {
   /* .logo {
     width: 120px;
     margin: 15px 0 15px 30px;
   } */
+
+  h1,
+  h2,
+  h3,
+  p,
+  li {
+    font-size: 100%;
+  }
 
   #img-1 {
     display: block;
@@ -683,6 +724,10 @@ form input {
 
   nav ul li {
     padding: 10px;
+  }
+
+  .filtres li {
+    font-size: 14px;
   }
 
   #info .fas {
