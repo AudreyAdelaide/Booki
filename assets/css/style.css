@@ -770,44 +770,44 @@ form input {
   }
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 370px) {
   /*************************
 ********** FONTS *********
 **************************/
 
   h1,
   h2 {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 700;
   }
 
   h3 {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 700;
   }
 
   p,
   nav li {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .filtres h2,
   .plus p {
-    font-size: 18px;
-    font-weight: 700;
-  }
-
-  .filtres li {
     font-size: 16px;
     font-weight: 700;
   }
 
+  .filtres li {
+    font-size: 14px;
+    font-weight: 700;
+  }
+
   .hebergement p {
-    font-size: 13px;
+    font-size: 11px;
   }
 
   ::placeholder {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   /********************/
