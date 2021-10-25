@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;900&display=swap");
 
 /*************************
 ***** CONFIGURATION ******
@@ -28,6 +28,10 @@ body {
 a {
   text-decoration: none;
   color: black;
+}
+
+ul {
+  padding-left: 0;
 }
 
 h1,
@@ -71,7 +75,6 @@ nav li {
 .filtres h2,
 .plus p {
   font-size: 18px;
-  font-weight: 700;
 }
 
 .filtres li {
@@ -151,10 +154,10 @@ nav ul li:hover a,
 ***** SECTION RECHERCHE ***
 ***************************/
 
-#recherche h1,
+/* #recherche h1,
 #subtitle {
   padding-left: 4px;
-}
+} */
 
 form {
   margin: 22px 0 34px;
@@ -192,7 +195,7 @@ form input {
   width: 235px;
   border: solid 1px var(--grey);
   outline: none;
-  padding: 15px;
+  padding: 15px 15px 15px 20px;
 }
 
 /**************************
@@ -204,6 +207,7 @@ form input {
 
 .filtres h2 {
   margin-left: 12px;
+  margin-right: 20px;
 }
 
 .filtres,
@@ -213,17 +217,17 @@ form input {
 }
 
 .filtres {
-  margin: 20px 0 40px;
+  margin: 20px 0 25px;
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
 }
 
 .filtres li {
-  font-weight: 600;
-  margin: 0 0 0 3%;
-  height: 45px;
-  padding-right: 20px;
+  font-weight: 700;
+  height: 50px;
+  padding-right: 15px;
+  margin: 0 15px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -239,8 +243,9 @@ form input {
 }
 
 .filtres .fas {
-  width: 45px;
-  height: 45px;
+  font-size: 18px;
+  width: 50px;
+  height: 50px;
   padding: 20px;
   margin-left: -2px;
   margin-right: 10px;
@@ -453,12 +458,17 @@ form input {
     flex-wrap: wrap;
   }
 
+  .filtres h2 {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
   #categories ul {
     flex-wrap: wrap;
   }
 
-  #categories ul li {
-    margin: 10px;
+  .filtres ul li {
+    margin: 5px 30px 5px 0;
   }
 
   .heberment-list-container {
@@ -509,7 +519,7 @@ form input {
 @media screen and (max-width: 768px) {
   h1,
   h2 {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   h3 {
@@ -523,11 +533,16 @@ form input {
 
   .filtres h2,
   .plus p {
-    font-size: 20px;
+    font-size: 18px;
+    font-weight: 700;
   }
 
-  .filtres li {
-    font-size: 18px;
+  .filtres ul li {
+    font-size: 16px;
+  }
+
+  .filtres ul li {
+    margin: 5px 9px 5px 0;
   }
 
   .hebergement p {
@@ -545,8 +560,7 @@ form input {
   }
 
   .logo {
-    width: 130px;
-    margin-bottom: 30px;
+    width: 95px;
   }
 
   nav {
@@ -567,31 +581,36 @@ form input {
   }
 
   nav ul li {
-    border-bottom: solid 6px var(--grey);
+    border-bottom: solid 3px var(--grey);
   }
 
   nav ul li:hover,
   #highlight {
     border-top: transparent;
-    border-bottom: solid 6px var(--blue-color);
+    border-bottom: solid 3px var(--blue-color);
+  }
+
+  #recherche {
+    margin: 0 15px;
   }
 
   #recherche h1 {
-    margin: 40px 0 10px;
+    margin: 30px 0 11px;
   }
 
   form {
-    margin-top: 30px;
+    margin-top: 35px;
     position: relative;
   }
 
   form input {
-    width: 100%;
+    padding-right: 20%;
+    width: 90%;
   }
 
   form .btn-submit {
     position: absolute;
-    right: -1%;
+    right: 0;
     border-radius: 15px;
     width: 50px;
     height: 50px;
