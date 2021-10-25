@@ -214,7 +214,6 @@ form input {
 
 .filtres {
   margin: 20px 0 40px;
-
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
@@ -234,6 +233,7 @@ form input {
 }
 
 .filtres li:hover {
+  color: var(--blue-color);
   transform: scale(1.1);
   transition: 0.2s ease;
 }
