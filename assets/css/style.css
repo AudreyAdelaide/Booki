@@ -663,9 +663,10 @@ form input {
   }
 
   form input {
-    width: 100%;
-    padding-right: 17%;
+    width: 80%;
+    padding-right: 8%;
   }
+
   form .btn-submit {
     position: absolute;
     right: 6%;
@@ -748,5 +749,10 @@ form input {
 
   #recherche {
     margin: 0 1%;
+  }
+
+  form input {
+    width: 70%;
+    padding-right: 13%;
   }
 }
