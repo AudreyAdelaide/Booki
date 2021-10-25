@@ -510,9 +510,9 @@ form input {
     margin: 5%;
   }
 
-  #info {
+  /* #info {
     margin-left: 1%;
-  }
+  } */
 }
 
 /******** TABLETTE ********/
@@ -527,7 +527,8 @@ form input {
   }
 
   p,
-  nav li {
+  nav li,
+  .hebergement p {
     font-size: 16px;
   }
 
@@ -543,10 +544,6 @@ form input {
 
   .filtres ul li {
     margin: 5px 9px 5px 0;
-  }
-
-  .hebergement p {
-    font-size: 14px;
   }
 
   ::placeholder {
@@ -631,7 +628,6 @@ form input {
 
   #info {
     align-items: flex-start;
-    margin-left: 2%;
   }
 
   #liste-hebergement {
@@ -641,6 +637,10 @@ form input {
   .bloc-droit,
   .bloc-gauche {
     border-radius: 0;
+  }
+
+  .bloc-gauche {
+    background: var(--white);
   }
 
   #cards-populaires {
