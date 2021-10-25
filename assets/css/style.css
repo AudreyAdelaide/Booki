@@ -715,6 +715,101 @@ form input {
   }
 }
 
+@media screen and (max-width: 440px) {
+  h1,
+  h2 {
+    font-size: 26px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  p,
+  nav li {
+    font-size: 18px;
+  }
+
+  .filtres h2,
+  .hebergement p,
+  .plus p {
+    font-size: 18px;
+  }
+
+  .filtres li {
+    font-size: 16px;
+  }
+
+  ::placeholder {
+    font-size: 18px;
+  }
+
+  form input {
+    width: 70%;
+    padding-right: 13%;
+  }
+}
+
+@media screen and (max-width: 396px) {
+  h1,
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  p,
+  nav li {
+    font-size: 16px;
+  }
+
+  .filtres h2,
+  .hebergement p,
+  .plus p {
+    font-size: 16px;
+  }
+
+  .filtres li {
+    font-size: 12px;
+  }
+
+  ::placeholder {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 355px) {
+  h1,
+  h2 {
+    font-size: 22px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  p,
+  nav li {
+    font-size: 16px;
+  }
+
+  .filtres h2,
+  .hebergement p,
+  .plus p {
+    font-size: 16px;
+  }
+
+  .filtres li {
+    font-size: 12px;
+  }
+
+  ::placeholder {
+    font-size: 16px;
+  }
+}
+
 @media screen and (max-width: 320px) {
   h1,
   h2 {
@@ -736,7 +831,7 @@ form input {
   }
 
   .filtres li {
-    font-size: 12px;
+    font-size: 11px;
   }
 
   .hebergement p {
@@ -748,11 +843,11 @@ form input {
   }
 
   #recherche {
-    margin: 0 1%;
+    margin: 0 2%;
   }
 
-  form input {
+  /* form input {
     width: 70%;
     padding-right: 13%;
-  }
+  } */
 }
