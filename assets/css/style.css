@@ -780,7 +780,7 @@ form input {
   }
 }
 
-@media screen and (max-width: 355px) {
+@media screen and (max-width: 360px) {
   h1,
   h2 {
     font-size: 22px;
