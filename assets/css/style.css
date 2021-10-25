@@ -15,7 +15,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  transition: all 0.3s ease;
 }
 
 body {
@@ -23,6 +22,7 @@ body {
   padding: 0;
   font-family: "Raleway", sans-serif;
   background: var(--white);
+  line-height: 1.2;
 }
 
 a {
@@ -135,18 +135,17 @@ nav ul li {
   border-top: solid 3px transparent;
   transition: 0.2s ease;
 }
-nav ul li:hover {
+nav ul li:hover,
+#highlight {
   border-top: solid 3px var(--blue-color);
   transition: 0.2s ease;
 }
 
-nav ul li:hover a {
+nav ul li:hover a,
+#highlight a {
   color: var(--blue-color);
-  font-weight: 600;
   transition: 0.2s ease;
 }
-
-/********** Section Rechercher **************/
 
 /**************************
 ***** SECTION RECHERCHE ***
@@ -190,6 +189,7 @@ form .btn-submit {
 }
 
 form input {
+  width: 235px;
   border: solid 1px var(--grey);
   outline: none;
   padding: 15px;
@@ -463,10 +463,11 @@ form input {
 
   .heberment-list-container {
     flex-wrap: wrap;
+    justify-content: flex-start;
   }
 
   .hebergement {
-    width: 43%;
+    width: 48%;
   }
 
   #liste-hebergement {
@@ -569,7 +570,8 @@ form input {
     border-bottom: solid 6px var(--grey);
   }
 
-  nav ul li:hover {
+  nav ul li:hover,
+  #highlight {
     border-top: transparent;
     border-bottom: solid 6px var(--blue-color);
   }
@@ -578,14 +580,31 @@ form input {
     margin: 40px 0 10px;
   }
 
-  #recherche h1,
-  #subtitle {
-    text-align: center;
-  }
   form {
-    justify-content: center;
     margin-top: 30px;
+    position: relative;
   }
+
+  form input {
+    width: 100%;
+  }
+
+  form .btn-submit {
+    position: absolute;
+    right: -1%;
+    border-radius: 15px;
+    width: 50px;
+    height: 50px;
+  }
+
+  #mobile-icon {
+    display: block;
+  }
+
+  #desktop {
+    display: none;
+  }
+
   .filtres {
     flex-direction: column;
     align-items: flex-start;
@@ -618,10 +637,27 @@ form input {
   .populaire-infos {
     margin: 4%;
   }
+
+  .hebergement {
+    width: 100%;
+  }
+
+  .hebergement-populaire {
+    width: 100%;
+  }
+
+  .heberment-list-container,
+  #cards-populaires {
+    gap: 15px;
+  }
+
+  .bloc-droit h1 {
+    margin-bottom: 11%;
+  }
 }
 
 /********* MOBILE *********/
-@media screen and (max-width: 480px) {
+/* @media screen and (max-width: 480px) {
   h1,
   h2 {
     font-size: 27px;
@@ -713,9 +749,9 @@ form input {
   .bloc-droit h1 {
     margin-bottom: 11%;
   }
-}
+} */
 
-@media screen and (max-width: 440px) {
+/* @media screen and (max-width: 440px) {
   h1,
   h2 {
     font-size: 26px;
@@ -849,5 +885,5 @@ form input {
   /* form input {
     width: 70%;
     padding-right: 13%;
-  } */
-}
+  } 
+}*/
