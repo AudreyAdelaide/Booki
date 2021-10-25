@@ -536,10 +536,6 @@ form input {
 
 /******** TABLETTE ********/
 @media screen and (max-width: 768px) {
-  /*************************
-********** FONTS *********
-**************************/
-
   h1,
   h2 {
     font-size: 25px;
@@ -574,8 +570,6 @@ form input {
   ::placeholder {
     font-size: 22px;
   }
-
-  /********************/
 
   header {
     flex-direction: column;
@@ -708,9 +702,6 @@ form input {
   #img-2 {
     display: none;
   }
-  #recherche {
-    margin: 0 22px;
-  }
 
   #recherche h1 {
     margin-top: 8%;
@@ -752,6 +743,15 @@ form input {
     padding: 10px;
   }
 
+  .bloc-gauche,
+  .bloc-droit {
+    padding: 10% 6%;
+  }
+
+  .bloc-gauche {
+    background: var(--white);
+  }
+
   #cards-populaires {
     flex-wrap: nowrap;
     flex-direction: column;
@@ -768,13 +768,18 @@ form input {
   .hebergement-populaire {
     width: 100%;
   }
+
+  .heberment-list-container,
+  #cards-populaires {
+    gap: 15px;
+  }
+
+  .bloc-droit h1 {
+    margin-bottom: 11%;
+  }
 }
 
 @media screen and (max-width: 370px) {
-  /*************************
-********** FONTS *********
-**************************/
-
   h1,
   h2 {
     font-size: 22px;
@@ -809,6 +814,4 @@ form input {
   ::placeholder {
     font-size: 16px;
   }
-
-  /********************/
 }
