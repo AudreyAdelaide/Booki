@@ -601,8 +601,9 @@ form input {
   }
 
   form input {
-    padding-right: 20%;
-    width: 90%;
+    padding-right: 70px;
+    width: 700px;
+    border-radius: 0 15px 15px 0;
   }
 
   form .btn-submit {
