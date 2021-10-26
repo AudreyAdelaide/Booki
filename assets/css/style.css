@@ -193,7 +193,7 @@ form .btn-submit {
 }
 
 form input {
-  width: 235px;
+  width: 17%;
   border: solid 1px var(--grey);
   outline: none;
   padding: 15px 15px 15px 20px;
@@ -585,6 +585,10 @@ footer ul li:hover {
     margin: 0 6%;
   }
 
+  form input {
+    width: 100%;
+  }
+
   .bloc-gauche,
   .bloc-droit {
     border-radius: 0;
@@ -792,7 +796,7 @@ footer ul li:hover {
 
   form input {
     padding-right: 70px;
-    width: 700px;
+    width: 100%;
     border-radius: 0 15px 15px 0;
   }
 
