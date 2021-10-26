@@ -454,6 +454,12 @@ form input {
   box-shadow: 1px 1px 15px var(--dark-grey);
 }
 
+.activity-list:hover {
+  color: var(--blue-color);
+  transform: scale(1.03);
+  transition: transform 0.3s ease;
+}
+
 .activity-list h3 {
   padding: 15px;
 }
@@ -534,6 +540,10 @@ form input {
 footer {
   width: 100%;
   background: var(--grey);
+}
+
+footer ul li:hover {
+  color: var(--blue-color);
 }
 
 #pied-de-page {
