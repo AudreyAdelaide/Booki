@@ -108,7 +108,8 @@ section {
 }
 
 header,
-main {
+main,
+#pied-de-page {
   max-width: 1440px;
   margin: 0 auto;
 }
@@ -427,10 +428,136 @@ form input {
 }
 
 /***************************
+********* Activités ********
+****************************/
+
+#activity {
+  margin-top: 3%;
+  margin-bottom: 5%;
+  /* padding: 45px 3%; */
+}
+
+#gallerie {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: space-between;
+  margin-top: 30px;
+  height: 450px;
+  /* gap: 30px; */
+}
+
+.activity-list {
+  width: 23%;
+  border-radius: 15px;
+  box-shadow: 1px 1px 15px var(--dark-grey);
+}
+
+.activity-list h3 {
+  padding: 15px;
+}
+
+.activity-list img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+
+.activity-list:nth-child(6n + 1) {
+  order: 1;
+  height: 100%;
+}
+.activity-list:nth-child(6n + 2),
+.activity-list:nth-child(6n + 3) {
+  order: 2;
+}
+.activity-list:nth-child(6n + 4) {
+  order: 3;
+  height: 100%;
+}
+
+.activity-list:nth-child(6n + 5),
+.activity-list:nth-child(6n) {
+  order: 4;
+  height: 45%;
+}
+
+/* Dimension activity */
+
+/* colone 1 et 3 */
+.activity-list:nth-child(6n + 1) img,
+.activity-list:nth-child(6n + 4) img {
+  height: 87%;
+}
+
+/* colone 2 */
+
+.activity-list:nth-child(6n + 2) {
+  height: 50%;
+}
+
+.activity-list:nth-child(6n + 2) img {
+  height: 75%;
+}
+
+.activity-list:nth-child(6n + 3) {
+  height: 40%;
+}
+
+.activity-list:nth-child(6n + 3) img {
+  height: 70%;
+}
+
+/* colone 4 */
+
+.activity-list:nth-child(6n + 5) {
+  height: 40%;
+}
+
+.activity-list:nth-child(6n + 5) img {
+  height: 70%;
+}
+
+.activity-list:nth-child(6n) {
+  height: 50%;
+}
+
+.activity-list:nth-child(6n) img {
+  height: 75%;
+}
+
+/***************************
+********** FOOTER **********
+****************************/
+
+footer {
+  width: 100%;
+  background: var(--grey);
+}
+
+#pied-de-page {
+  padding: 3%;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 255px;
+}
+
+.box {
+  line-height: 2;
+}
+
+.box h3 {
+  padding-bottom: 7%;
+  font-size: 18px;
+}
+
+/***************************
 ******** RESPONSIVE ********
 ****************************/
 
-/******** DESKTOP ********/
+/******** Tablette ********/
 
 @media screen and (max-width: 992px) {
   h1,
@@ -510,12 +637,65 @@ form input {
     margin: 5%;
   }
 
-  /* #info {
-    margin-left: 1%;
-  } */
+  /* Activités */
+
+  #activity {
+    margin: 3%;
+  }
+
+  #gallerie {
+    flex-direction: row;
+    height: 100%;
+  }
+
+  .activity-list {
+    width: 48%;
+    height: 30%;
+    margin-bottom: 5%;
+  }
+
+  .activity-list:nth-child(6n + 1),
+  .activity-list:nth-child(6n + 2),
+  .activity-list:nth-child(6n + 3) {
+    order: 1;
+  }
+
+  .activity-list:nth-child(6n + 4),
+  .activity-list:nth-child(6n + 5),
+  .activity-list:nth-child(6n) {
+    order: 2;
+  }
+
+  .activity-list:nth-child(6n + 1),
+  .activity-list:nth-child(6n + 2),
+  .activity-list:nth-child(6n + 3),
+  .activity-list:nth-child(6n + 4),
+  .activity-list:nth-child(6n + 5),
+  .activity-list:nth-child(6n) {
+    height: 200px;
+  }
+
+  .activity-list:nth-child(6n + 1) img,
+  .activity-list:nth-child(6n + 2) img,
+  .activity-list:nth-child(6n + 3) img,
+  .activity-list:nth-child(6n + 4) img,
+  .activity-list:nth-child(6n + 5) img,
+  .activity-list:nth-child(6n) img {
+    height: 70%;
+  }
+
+  /* Footer */
+
+  #pied-de-page {
+    gap: 0;
+  }
+
+  .box {
+    margin: 0 22% 10% 0;
+  }
 }
 
-/******** TABLETTE ********/
+/******** Mobile ********/
 @media screen and (max-width: 768px) {
   h1,
   h2 {
@@ -673,6 +853,35 @@ form input {
 
   .bloc-droit h1 {
     margin-bottom: 11%;
+  }
+
+  /* Activités */
+
+  #activity {
+    margin-top: 0;
+  }
+
+  .activity-list:nth-child(6n + 1),
+  .activity-list:nth-child(6n + 2),
+  .activity-list:nth-child(6n + 3),
+  .activity-list:nth-child(6n + 4),
+  .activity-list:nth-child(6n + 5),
+  .activity-list:nth-child(6n) {
+    width: 100%;
+  }
+
+  /* Footer */
+
+  #pied-de-page {
+    padding: 10% 3% 0;
+  }
+
+  .box h3 {
+    padding-bottom: 1%;
+  }
+
+  .box {
+    margin: 0 15% 10% 0;
   }
 }
 
