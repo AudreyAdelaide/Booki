@@ -187,13 +187,14 @@ form .btn-submit {
   width: 100%;
 }
 .filters {
-  margin: 2% 0;
+  margin: 2% 0 3%;
   align-items: center;
 }
 .filters h2 {
   margin: 0 2% 0 1%;
 }
 .filters li {
+  cursor: pointer;
   font-weight: 700;
   padding-right: 2%;
   display: flex;
@@ -317,7 +318,6 @@ form .btn-submit {
 
 .more {
   font-weight: 700;
-  /* margin-top: 45px; */
   margin-top: 2%;
 }
 
@@ -375,8 +375,12 @@ form .btn-submit {
 ********* Activités ********
 ****************************/
 
-#activity {
+/* #activity {
   margin-top: 40px;
+} */
+
+#activity h2 {
+  margin: 5% 0 3%;
 }
 
 #activity-cards {
@@ -385,15 +389,16 @@ form .btn-submit {
   flex-wrap: wrap;
   align-content: space-between;
   justify-content: space-between;
-  margin-top: 30px;
+  /* margin-top: 30px; */
   height: 450px;
   /* gap: 30px; */
 }
 
 .activity-card {
-  width: 23%;
+  /* width: 23%; */
+  width: 303px;
   border-radius: 15px;
-  box-shadow: 1px 1px 15px #d9d9d9;
+  box-shadow: 1px 8px 15px #d9d9d9;
 }
 .activity-card:hover {
   color: #0065fc;
@@ -410,7 +415,8 @@ form .btn-submit {
 }
 .activity-card:nth-child(6n + 1) {
   order: 1;
-  height: 100%;
+  /* height: 100%; */
+  height: 444px;
 }
 .activity-card:nth-child(6n + 2),
 .activity-card:nth-child(6n + 3) {
@@ -418,7 +424,8 @@ form .btn-submit {
 }
 .activity-card:nth-child(6n + 4) {
   order: 3;
-  height: 100%;
+  /* height: 100%; */
+  height: 444px;
 }
 .activity-card:nth-child(6n + 5),
 .activity-card:nth-child(6n) {
@@ -465,7 +472,7 @@ form .btn-submit {
 ****************************/
 
 footer {
-  margin-top: 40px;
+  margin-top: 60px;
   width: 100%;
   background: #f2f2f2;
 }
@@ -473,7 +480,8 @@ footer ul li:hover {
   color: #0065fc;
 }
 #footer-container {
-  padding: 3%;
+  /* padding: 3% 3% 0; */
+  padding: 2% 3% 2%;
   display: flex;
   /* justify-content: flex-start; */
   flex-wrap: wrap;
@@ -481,10 +489,10 @@ footer ul li:hover {
 .footer-box {
   line-height: 2;
   margin-right: 18%;
-  margin-bottom: 3%;
+  /* margin-bottom: 3%; */
 }
 .footer-box h3 {
-  padding-bottom: 7%;
+  padding-bottom: 3%;
   font-size: 18px;
 }
 
@@ -634,11 +642,15 @@ footer ul li:hover {
     font-size: 18px;
     font-weight: 700;
   }
+  .filters {
+    margin: 2% 0 10%;
+  }
   .filters ul li {
     font-size: 16px;
   }
   .filters ul li {
-    margin: 5px 9px 5px 0;
+    /* margin: 5px 9px 5px 0; */
+    margin: 3% 3% 0 0;
   }
   ::placeholder {
     font-size: 20px;
@@ -699,7 +711,7 @@ footer ul li:hover {
     align-items: flex-start;
   } */
   .filters li {
-    padding-right: 3%;
+    padding-right: 4%;
   }
   #info {
     align-items: flex-start;
